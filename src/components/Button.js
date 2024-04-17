@@ -4,7 +4,7 @@ const Button = ({name}) => {
   return (
     <div>
                 
-        <button className='m-2 px-4 bg-gray-400'>{name}</button>
+        <button className='m-2 px-4 py--2 bg-gray-400 h-100%'>{name}</button>
     </div>
   )
 }
