@@ -3,6 +3,7 @@ import {useDispatch} from 'react-redux'
 import {closeMenu} from "../utils/appSlice.js"
 import { useSearchParams } from 'react-router-dom';
 import CommentsContainer from './CommentsContainer.js';
+import LiveChat from './LiveChat.js';
 const WatchPage = () => {
     const dispatch=useDispatch();
     useEffect(()=>{
@@ -10,9 +11,10 @@ const WatchPage = () => {
     });
 
     const [searchParams]=useSearchParams();
-    console.log(searchParams.get('v'));
+    // console.log(searchParams.get('v'));
     
   return (
+    <div className='flex w-full'>
     <div>
         <iframe 
         className="p-2 m-2"
@@ -27,7 +29,13 @@ const WatchPage = () => {
 
         </iframe>
         <CommentsContainer/>
+        
     </div>
+    <div className='p-2 m-2  border h-[464px] w-full'>
+      <LiveChat/>
+    </div>
+    </div>
+    
   )
 }
 

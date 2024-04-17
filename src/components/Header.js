@@ -6,10 +6,7 @@ import { YOUTUBE_SEARCH_API } from '../utils/constants.js';
 import { cacheResults } from '../utils/searchSlice.js';
 
 const Header = () => {
-  const searchCache=useSelector((store)=>store.search);
-
-
-  const dispatch=useDispatch();
+  
   const toggleMenuHandler=()=>{
     dispatch(toggleMenu());
   }
@@ -17,7 +14,10 @@ const Header = () => {
   const [suggestions,setSuggestions]=useState([]);
   const [showSuggestions,setShowSuggestions]=useState(false);
   const [searchQuery,setSearchQuery]=useState("");
+  const searchCache=useSelector((store)=>store.search);
 
+
+  const dispatch=useDispatch();
   useEffect(()=>{
     const timer=setTimeout(()=>{
       if(searchCache[searchQuery]){
@@ -34,13 +34,14 @@ const Header = () => {
   },[searchQuery]);
   
   const getSearchSuggestions = async() => {
-    console.log("api call:"+searchQuery)
+    // console.log("api call:"+searchQuery)
     const data=await fetch(YOUTUBE_SEARCH_API+searchQuery);
     const json=await data.json();
     setSuggestions(json[1]);
     dispatch(cacheResults({
       [searchQuery]:json[1],
     }));
+
   }
 
 
