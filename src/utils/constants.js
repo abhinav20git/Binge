@@ -1,11 +1,8 @@
 // const YOUTUBE_API="https://www.googleapis.com/youtube/v3/videos";
 const GOOGLE_API_KEY = "AIzaSyAa1VGBLbspBAigAEaZzkHroJNkan8o8oI";
 
-<<<<<<< HEAD
 export const LIVE_CHAT_COUNT = 30;
-=======
-export const LIVE_CHAT_COUNT = 15;
->>>>>>> 26b3721190772dc966ac05d161b45f52094ef58e
+
 
 export const YOUTUBE_VIDEOS_API ="https://youtube.googleapis.com/youtube/v3/videos?part=snippet&part=contentDetails&part=statistics&chart=mostPopular&maxResults=50&regionCode=IN&key="+GOOGLE_API_KEY;
 
