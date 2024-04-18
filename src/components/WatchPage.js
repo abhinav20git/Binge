@@ -31,7 +31,11 @@ const WatchPage = () => {
         <CommentsContainer/>
         
     </div>
+<<<<<<< HEAD
     <div className=' border rounded-t-lg h-[464px] w-full'>
+=======
+    <div className='p-2 m-2  border h-[464px] w-full'>
+>>>>>>> 26b3721190772dc966ac05d161b45f52094ef58e
       <LiveChat/>
     </div>
     </div>
