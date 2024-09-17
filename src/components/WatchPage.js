@@ -14,7 +14,7 @@ const WatchPage = () => {
     // console.log(searchParams.get('v'));
     
   return (
-    <div className='flex w-full'>
+    <div className='flex w-full justify-center align-middle'>
     <div>
         <iframe 
         className="p-2 m-2"
@@ -34,7 +34,7 @@ const WatchPage = () => {
 
     {/* <div className=' border rounded-t-lg h-[464px] w-full'> */}
 
-    <div className='p-2 m-2  border h-[464px] w-full'>
+    <div className='   w-full'>
       <LiveChat/>
     </div>
     </div>

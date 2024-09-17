@@ -4,10 +4,10 @@ import VideoCard from './VideoCard';
 import { Link } from 'react-router-dom';
 
 const VideoContainer = () => {
-  const [videos,setVideos]=useState([]);
-  useEffect(()=>{
-        getVideos();
-  },[])
+    const [videos,setVideos]=useState([]);
+    useEffect(()=>{
+          getVideos();
+    },[])
 
     const getVideos=async()=>{
         const data=await fetch(YOUTUBE_VIDEOS_API);
@@ -16,14 +16,16 @@ const VideoContainer = () => {
     };
 
     return (
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap  justify-center">
         
       
-        {videos.map(video=>(
+        {
+          videos.map(video=>
             <Link key={video.id} to={"/watch?v=" + video.id} >
               <VideoCard info={video}/>
             </Link>
-        ))}
+          )
+        }
         
       </div>
     );

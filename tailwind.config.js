@@ -2,8 +2,14 @@
 module.exports = {
   content: ["./src/**/*.js"],
   theme: {
-    extend: {},
+    extend: {
+      daisyui: {
+        themes: ["light","aqua"],
+      },
+    },
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+  ],
 }
 

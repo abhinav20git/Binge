@@ -6,51 +6,51 @@ const commentsData = [
     text: "Lorem ipsum dolor sit amet, consectetur adip",
     replies: [],
   },
-  {
-    name: "Abhinav ",
-    text: "Lorem ipsum dolor sit amet, consectetur adip",
-    replies: [
-      {
-        name: "Abhinav ",
-        text: "Lorem ipsum dolor sit amet, consectetur adip",
-        replies: [],
-      },
-      {
-        name:"Abhinav ",
-        text: "Lorem ipsum dolor sit amet, consectetur adip",
-        replies: [
-          {
-            name: "Abhinav ",
-            text: "Lorem ipsum dolor sit amet, consectetur adip",
-            replies: [
-              {
-                name: "Abhinav ",
-                text: "Lorem ipsum dolor sit amet, consectetur adip",
-                replies: [
-                  {
-                    name: "Abhinav ",
-                    text: "Lorem ipsum dolor sit amet, consectetur adip",
-                    replies: [
-                      {
-                        name: "Abhinav ",
-                        text: "Lorem ipsum dolor sit amet, consectetur adip",
-                        replies: [],
-                      },
-                    ],
-                  },
-                  {
-                    name:"Abhinav ",
-                    text: "Lorem ipsum dolor sit amet, consectetur adip",
-                    replies: [],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
+  // {
+  //   name: "Abhinav ",
+  //   text: "Lorem ipsum dolor sit amet, consectetur adip",
+  //   replies: [
+  //     {
+  //       name: "Abhinav ",
+  //       text: "Lorem ipsum dolor sit amet, consectetur adip",
+  //       replies: [],
+  //     },
+  //     {
+  //       name:"Abhinav ",
+  //       text: "Lorem ipsum dolor sit amet, consectetur adip",
+  //       replies: [
+  //         {
+  //           name: "Abhinav ",
+  //           text: "Lorem ipsum dolor sit amet, consectetur adip",
+  //           replies: [
+  //             {
+  //               name: "Abhinav ",
+  //               text: "Lorem ipsum dolor sit amet, consectetur adip",
+  //               replies: [
+  //                 {
+  //                   name: "Abhinav ",
+  //                   text: "Lorem ipsum dolor sit amet, consectetur adip",
+  //                   replies: [
+  //                     {
+  //                       name: "Abhinav ",
+  //                       text: "Lorem ipsum dolor sit amet, consectetur adip",
+  //                       replies: [],
+  //                     },
+  //                   ],
+  //                 },
+  //                 {
+  //                   name:"Abhinav ",
+  //                   text: "Lorem ipsum dolor sit amet, consectetur adip",
+  //                   replies: [],
+  //                 },
+  //               ],
+  //             },
+  //           ],
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
   {
     name: "Abhinav ",
     text: "Lorem ipsum dolor sit amet, consectetur adip",

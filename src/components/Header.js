@@ -4,6 +4,8 @@ import { toggleMenu } from '../utils/appSlice';
 import { useState , useEffect } from 'react';
 import { YOUTUBE_SEARCH_API } from '../utils/constants.js';
 import { cacheResults } from '../utils/searchSlice.js';
+import { ToggleTheme } from './ToggleTheme.js';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   
@@ -34,7 +36,7 @@ const Header = () => {
   },[searchQuery]);
   
   const getSearchSuggestions = async() => {
-    // console.log("api call:"+searchQuery)
+    console.log("api call:"+searchQuery)
     const data=await fetch(YOUTUBE_SEARCH_API+searchQuery);
     const json=await data.json();
     setSuggestions(json[1]);
@@ -46,11 +48,13 @@ const Header = () => {
 
 
   return(
-    <div className=' m-2 flex justify-between max-w-100% '>
+    <div className=' m-2 ml-3 flex justify-between max-w-100% align-middle '>
 
-      <div className='flex justify-center max-w-24'>
-        <img className=" ml-14 h-12"  onClick={()=>toggleMenuHandler()} alt="menu" src="https://cdn2.iconfinder.com/data/icons/most-useful-icons-4/50/HAMBURGER_MENU-512.png"/>
-        <img className=" ml-2 h-12" alt="icon" src="https://www.gstatic.com/youtube/img/icons/mweb/youtube_fill/logo_with_text/v2/24px.svg"/>
+      <div className='flex justify-center max-w-24 my-auto'>
+       
+        <button className="btn btn-ghost text-xl" >
+          <span className="font-bold text-3xl">Binge</span>
+        </button>
       </div>
 
       <div className="flex m-2 w-1/2">
@@ -72,7 +76,8 @@ const Header = () => {
               {suggestions.map((s)=> 
               <li key={s} className="py-2 px-2  rounded-lg hover:bg-gray-100 w-full shadow-sm" 
               > 
-              🔍 {s} 
+              🔍{s} 
+               
               </li>)
               }
               
@@ -82,12 +87,43 @@ const Header = () => {
         
       </div>
       
+       
+          <ToggleTheme className='my-auto'/>
+        
+        
+        <div className="dropdown dropdown-end my-auto">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn btn-ghost btn-circle avatar"
+          >
+            <div className="w-10 rounded-full">
+              <img
+                alt="Tailwind CSS Navbar component"
+                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+              />
+            </div>
+          </div>
 
-      <div className='flex mr-4'>
-        <button><img alt="create" className="h-12" src="https://tse2.mm.bing.net/th?id=OIP.geaDSjRIkFo1vA_MfQlRxgHaHa&pid=Api&P=0&h=180"/></button>
-        <button><img alt="bell-icon" className="h-8 m-4" src="https://tse1.mm.bing.net/th?id=OIP.uzUNhsBgn4nXN8cg8zB7LQHaHa&pid=Api&P=0&h=180"/></button>
-        <button className=''><img alt="profile" className="h-8 mr-2 rounded-full"  src="https://yt3.ggpht.com/yti/ANjgQV_7SW-6riTEHl83NPc2fAIzFLidhWG1hsLWp55QiJ4=s88-c-k-c0x00ffffff-no-rj"/></button>
-      </div>
+          <ul
+            tabIndex={0}
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+          >
+            <li>
+              <button className="justify-between">
+                Profile
+                <span className="badge">New</span>
+              </button>
+            </li>
+            <li>
+              <button>Settings</button>
+            </li>
+            <li>
+              <button>Logout</button>
+            </li>
+          </ul>
+        </div>
+    
       
     </div>
   )

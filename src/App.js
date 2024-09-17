@@ -32,8 +32,8 @@ function App() {
 
   return (
     <Provider store={store} >
-    <div>
-      <Header className="fixed"/>
+    <div >
+      <Header />
       <RouterProvider router={appRouter}/>
     </div>
     </Provider>
